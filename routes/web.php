@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('www.index');
-});
+});*/
+
+Route::get('/','HomeController@index')->name('index');
+Route::get('gallery','HomeController@gallery')->name('gallery');
+Route::get('contact','HomeController@contact')->name('contact');
 
 Auth::routes();
 
